@@ -18,42 +18,63 @@
 
         @media (max-width: 768px) {
 
-            /* 1. Força o container a nunca ser maior que a tela */
-            .container,
-            .grid-projetos {
-                width: 100% !important;
-                max-width: 100vw;
-                /* vW = viewport width (largura da tela) */
-                padding-left: 10px !important;
-                padding-right: 10px !important;
-                box-sizing: border-box;
+            /* 1. Redução Global de Fontes e Espaços */
+            :root {
+                font-size: 14px;
+                /* Diminui a base de cálculo de tamanho do site todo */
+            }
+
+            body {
+                padding: 0;
+                margin: 0;
                 overflow-x: hidden;
-                /* Garante que nada saia pros lados */
+                /* Proíbe a rolagem lateral "torta" */
             }
 
-            /* 2. Ajusta o Grid para telas muito pequenas */
+            /* 2. Container Flexível e Seguro */
+            .container {
+                width: 100%;
+                padding: 0 10px;
+                /* Reduz o respiro lateral para ganhar espaço */
+                box-sizing: border-box;
+            }
+
+            /* 3. Grid Sem Tamanho Mínimo Fixo */
             .grid-projetos {
-                /* Tiramos o minmax fixo e deixamos 1 coluna total */
                 grid-template-columns: 1fr;
-                gap: 10px;
+                /* Uma coluna só */
+                gap: 12px;
+                width: 100%;
+                display: grid;
             }
 
-            /* 3. Ajuste do item para caber no 320px */
+            /* 4. O Card de Projeto se ajusta ao 320px */
             .projeto-item {
                 width: 100%;
                 min-width: 0;
-                /* Permite que o card encolha menos que 300px se necessário */
-                padding: 10px;
+                /* MUITO IMPORTANTE: permite que o card seja menor que 300px */
+                padding: 12px;
                 box-sizing: border-box;
             }
 
-            /* 4. Evita que títulos muito longos quebrem o layout */
-            h1,
+            /* 5. Ajuste de Imagens e Títulos */
+            .projeto-item img {
+                max-width: 100%;
+                height: auto;
+                border-radius: 8px;
+            }
+
+            h1 {
+                font-size: 1.8rem;
+            }
+
             h2 {
-                font-size: 1.2rem;
-                /* Diminui um pouco a fonte */
-                word-wrap: break-word;
-                /* Se a palavra for gigante, ela quebra em duas linhas */
+                font-size: 1.4rem;
+            }
+
+            p {
+                font-size: 1rem;
+                line-height: 1.4;
             }
         }
 
