@@ -16,69 +16,7 @@
             box-sizing: border-box;
         }
 
-        /* --- CONFIGURAÇÃO PARA CELULARES (Mobile) --- */
-        @media (max-width: 768px) {
-
-            /* 1. Ajuste do corpo da página: reduz o respiro lateral de 40px para 15px */
-            body {
-                padding: 15px !important;
-                display: flex;
-                flex-direction: column;
-                justify-content: flex-start;
-                /* Evita que o topo suma se o site for longo */
-                align-items: center;
-                min-height: 100vh;
-            }
-
-            /* 2. Ajuste do Cartão Principal: faz ele ocupar a largura toda disponível */
-            .cartao {
-                width: 100% !important;
-                max-width: 100%;
-                margin: 0;
-                padding: 20px;
-                /* Respiro interno do cartão */
-                box-sizing: border-box;
-                /* Essencial para não estourar os 320px */
-                border-radius: 15px;
-                /* Deixa as bordas mais suaves no mobile */
-            }
-
-            /* 3. Ajuste do Grid de Projetos: uma coluna só, sem erro */
-            .grid-projetos {
-                grid-template-columns: 1fr !important;
-                gap: 15px;
-                width: 100%;
-            }
-
-            /* 4. Tipografia: reduz os textos de forma uniforme para caber no 320px */
-            h1 {
-                font-size: 1.6rem !important;
-                /* Seu nome */
-                text-align: center;
-                line-height: 1.2;
-            }
-
-            h2 {
-                font-size: 1.3rem !important;
-                /* Títulos das seções */
-            }
-
-            p,
-            span,
-            li {
-                font-size: 0.95rem;
-                /* Textos menores e ícones */
-            }
-
-            /* 5. Ajuste de Imagens: garante que nenhuma foto "empurre" a borda */
-            img {
-                max-width: 100%;
-                height: auto;
-            }
-        }
-
-
-
+        
         body {
             background-color: #f4f7f6;
             color: #333;
