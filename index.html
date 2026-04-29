@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jonatas | Portfólio Dev</title>
+    
+    <link rel="stylesheet" href="css/certificados.css">
+    <link rel="stylesheet" href="css/livros.css">
+    <link rel="stylesheet" href="css/projetos.css">
+    <link rel="stylesheet" href="css/sobre.css">
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #f4f7f6;
+            color: #333;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 40px;
+            /* Aumentei o padding lateral */
+        }
+
+
+        .header-perfil {
+            display: flex;
+            /* Alinha a imagem e o texto horizontalmente */
+            align-items: center;
+            /* Centraliza verticalmente a imagem e o texto */
+            justify-content: flex-start;
+            /* Alinha tudo à esquerda */
+            gap: 25px;
+            /* Espaço entre a foto e o texto */
+            margin-bottom: 25px;
+            /* Espaço até as tags */
+            text-align: left;
+            /* Garante que o texto fique alinhado à esquerda */
+        }
+
+        .foto-perfil {
+            width: 120px;
+            /* Tamanho da foto */
+            height: 120px;
+            /* Tamanho da foto (deve ser igual à largura) */
+
+            /* A MÁGICA DO FORMATO REDONDO: border-radius de 50% */
+            border-radius: 50%;
+
+            object-fit: cover;
+            /* Garante que a foto não distorça se não for quadrada */
+            border: 4px solid #fff;
+            /* Uma borda branca interna */
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            /* Uma sombra suave na foto */
+        }
+
+        .textos-perfil {
+            flex: 1;
+            /* Faz o texto ocupar o espaço restante */
+        }
+
+        /* Ajustes finos nos textos existentes */
+        .textos-perfil h1 {
+            margin: 0;
+            /* Remove margens padrão */
+            font-size: 2.8em;
+            /* Aumenta um pouco o nome */
+        }
+
+        .textos-perfil .subtitulo {
+            margin: 5px 0 0 0;
+            /* Ajusta as margens */
+        }
+
+
+        .cartao {
+            background-color: white;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+            text-align: center;
+            /* AQUI ESTÁ O SEGREDO: Aumentamos de 700px para 1000px */
+            max-width: 1000px;
+            width: 100%;
+            border: 1px solid #e0e0e0;
+        }
+
+        h1 {
+            color: #2374ca;
+            margin-bottom: 5px;
+            font-size: 2.5em;
+        }
+
+        .subtitulo {
+            color: #666;
+            margin-bottom: 20px;
+            font-weight: 500;
+        }
+
+        .tag {
+            background-color: #eef2f7;
+            color: #2374ca;
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 13px;
+            font-weight: 600;
+            margin: 5px;
+            display: inline-block;
+            border: 1px solid #d1d9e6;
+        }
+
+        hr {
+            border: 0;
+            border-top: 1px solid #eee;
+            margin: 30px 0;
+        }
+
+
+
+        .btn-contato {
+            background-color: #28a745;
+            margin-top: 30px;
+            width: auto;
+            padding: 12px 50px;
+            font-size: 16px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="cartao">
+        <div class="header-perfil">
+            <img src=" img/minha-foto.jpg" alt=" Foto de jonatas" class="foto-perfil">
+
+            <div class="textos-perfil">
+                <h1>Jonatas Sales dos Santos Vieira</h1>
+                <p class="subtitulo"> Análise e Desenvolvimento de Sistemas | Senac</p>
+                <section class="sobre-mim">
+                    <details>
+                        <summary>
+                            Sou estudante de ADS no Senac e apaixonado por automação com Python...
+                            <span class="Sobre">Ler mais</span>
+                        </summary>
+                        <div class="texto-completo">
+                            <p>Atualmente no segundo semestre, desenvolvo projetos de web scraping
+                                com Selenium e Pandas. Busco transformar dados em insights com
+                                Power BI e aplico metodologias ágeis no meu fluxo de estudos.</p>
+                        </div>
+                    </details>
+                </section>
+            </div>
+
+
+        </div>
+
+        <div class="tags-container">
+            <span class="tag">Python</span>
+            <span class="tag">Selenium</span>
+            <span class="tag">Pandas</span>
+            <span class="tag">Web Scraping</span>
+            <span class="tag">Power BI</span>
+        </div>
+
+
+        <hr>
+
+        <h2 style="text-align: left; font-size: 20px; color: #444;">Projetos em Destaque</h2>
+
+        <div class="grid-projetos">
+            <div class="projeto-item">
+                <h3>projeto_analise_precos</h3>
+                <p>Manipulação de dados com Python e Pandas.</p>
+                <a href="https://github.com/jonatasssv/projeto_analise_precos" target="_blank" class="link-projeto">
+                    <button>Ver Código</button>
+                </a>
+            </div>
+
+            <div class="projeto-item">
+                <h3>Gestão de Estoque 📦</h3>
+                <p>Programa para controle de produtos e cálculo automático de inventário.</p>
+                <button onclick="alert('Link para o GitHub')">Ver Código</button>
+            </div>
+        </div>
+        <hr>
+        <h2 style="text-align: left; font-size: 20px; color: #444;">Certificações</h2>
+
+        <div class="certificados-grid">
+            <div class="cert-card">
+                <div class="cert-img-container">
+                    <img src="img/certificado excel.jpg" alt="Certificado Excel Recursos Avançados">
+                </div>
+                <div class="cert-detalhes">
+                    <p class="cert-nome">Excel - Recursos Avançados</p>
+                    <p class="cert-local">Senac</p>
+                </div>
+            </div>
+            <div class="cert-card">
+                <div class="cert-img-container">
+                    <img src="img/certificado wiseup.jpg" alt="Certificado Wise up">
+                </div>
+                <div class="cert-detalhes">
+                    <p class="cert-nome">Wiseup - 150 horas</p>
+                    <p class="cert-local">Wise up</p>
+                </div>
+            </div>
+
+
+        </div>
+
+        <hr>
+
+        <h2 style="text-align: left; font-size: 20px; color: #444;">Leituras e Estudos</h2>
+
+        <div class="biblioteca">
+            <div class="livro-item">
+                <img src="img/livro-python.jpg" alt="Python para Análise de Dados">
+                <p>Python para Análise de Dados</p>
+            </div>
+
+            <div class="livro-item">
+                <img src="img/livro-powerbi.jpg" alt="Power BI: do BI até os dashboards">
+                <p>Power BI: Do BI ao Dashboard</p>
+            </div>
+            <div class="livro-item">
+                <img src="img/web_do_zero.jpg" alt="Programação web do zero: HTML, CSS e Java script">
+                <p>Programação web do zero</p>
+            </div>
+        </div>
+
+        <button class="btn-contato" onclick="alert('Redirecionando para o WhatsApp...')">Fale Comigo</button>
+    </div>
+
+</body>
+
+</html>

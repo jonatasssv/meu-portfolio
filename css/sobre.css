@@ -1,0 +1,43 @@
+.sobre-mim {
+    margin: 20px 0;
+    line-height: 1.6;
+}
+
+summary {
+    list-style: none;
+    cursor: pointer;
+    color: #444;
+    font-size: 15px;
+}
+
+/* Remove a setinha chata do navegador */
+summary::-webkit-details-marker {
+    display: none;
+}
+
+.Sobre {
+    color: #2374ca; /* Cor azul que você já está usando */
+    font-weight: bold;
+    margin-left: 8px;
+    text-decoration: underline;
+    transition: color 0.3s;
+}
+
+.palavra-sobre:hover {
+    color: #1a5694; /* Escurece um pouco quando passa o mouse */
+}
+
+.texto-completo {
+    margin-top: 10px;
+    padding: 15px;
+    background-color: #fcfcfc;
+    border-radius: 8px;
+    border: 1px solid #eee;
+    color: #555;
+    animation: fadeIn 0.4s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
