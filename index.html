@@ -16,65 +16,64 @@
             box-sizing: border-box;
         }
 
+        /* --- CONFIGURAÇÃO PARA CELULARES (Mobile) --- */
         @media (max-width: 768px) {
 
-            /* 1. Redução Global de Fontes e Espaços */
-            :root {
-                font-size: 14px;
-                /* Diminui a base de cálculo de tamanho do site todo */
-            }
-
+            /* 1. Ajuste do corpo da página: reduz o respiro lateral de 40px para 15px */
             body {
-                padding: 0;
-                margin: 0;
-                overflow-x: hidden;
-                /* Proíbe a rolagem lateral "torta" */
+                padding: 15px !important;
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-start;
+                /* Evita que o topo suma se o site for longo */
+                align-items: center;
+                min-height: 100vh;
             }
 
-            /* 2. Container Flexível e Seguro */
-            .container {
-                width: 100%;
-                padding: 0 10px;
-                /* Reduz o respiro lateral para ganhar espaço */
-                box-sizing: border-box;
-            }
-
-            /* 3. Grid Sem Tamanho Mínimo Fixo */
-            .grid-projetos {
-                grid-template-columns: 1fr;
-                /* Uma coluna só */
-                gap: 12px;
-                width: 100%;
-                display: grid;
-            }
-
-            /* 4. O Card de Projeto se ajusta ao 320px */
-            .projeto-item {
-                width: 100%;
-                min-width: 0;
-                /* MUITO IMPORTANTE: permite que o card seja menor que 300px */
-                padding: 12px;
-                box-sizing: border-box;
-            }
-
-            /* 5. Ajuste de Imagens e Títulos */
-            .projeto-item img {
+            /* 2. Ajuste do Cartão Principal: faz ele ocupar a largura toda disponível */
+            .cartao {
+                width: 100% !important;
                 max-width: 100%;
-                height: auto;
-                border-radius: 8px;
+                margin: 0;
+                padding: 20px;
+                /* Respiro interno do cartão */
+                box-sizing: border-box;
+                /* Essencial para não estourar os 320px */
+                border-radius: 15px;
+                /* Deixa as bordas mais suaves no mobile */
             }
 
+            /* 3. Ajuste do Grid de Projetos: uma coluna só, sem erro */
+            .grid-projetos {
+                grid-template-columns: 1fr !important;
+                gap: 15px;
+                width: 100%;
+            }
+
+            /* 4. Tipografia: reduz os textos de forma uniforme para caber no 320px */
             h1 {
-                font-size: 1.8rem;
+                font-size: 1.6rem !important;
+                /* Seu nome */
+                text-align: center;
+                line-height: 1.2;
             }
 
             h2 {
-                font-size: 1.4rem;
+                font-size: 1.3rem !important;
+                /* Títulos das seções */
             }
 
-            p {
-                font-size: 1rem;
-                line-height: 1.4;
+            p,
+            span,
+            li {
+                font-size: 0.95rem;
+                /* Textos menores e ícones */
+            }
+
+            /* 5. Ajuste de Imagens: garante que nenhuma foto "empurre" a borda */
+            img {
+                max-width: 100%;
+                height: auto;
             }
         }
 
