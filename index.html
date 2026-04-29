@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jonatas | Portfólio Dev</title>
-    
+
     <link rel="stylesheet" href="css/certificados.css">
     <link rel="stylesheet" href="css/livros.css">
     <link rel="stylesheet" href="css/projetos.css">
@@ -14,6 +14,25 @@
     <style>
         * {
             box-sizing: border-box;
+        }
+
+        /* Quando a tela for menor que 768px (celulares e tablets) */
+        @media (max-width: 768px) {
+            .grid-projetos {
+                /* Muda de 3 colunas para apenas 1 */
+                grid-template-columns: 1fr;
+                gap: 15px;
+            }
+
+            .projeto-item {
+                padding: 15px;
+                /* Diminui um pouco o respiro */
+            }
+
+            /* Opcional: Diminuir um pouco o tamanho dos títulos no celular */
+            h1 {
+                font-size: 24px;
+            }
         }
 
         body {
