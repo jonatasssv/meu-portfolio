@@ -127,11 +127,21 @@
 
 
         .btn-contato {
-            background-color: #28a745;
+            background-color: #25d366;
+            color: white;
+            border-radius: 50px;
+            font-weight: bold;
             margin-top: 30px;
             width: auto;
             padding: 12px 50px;
             font-size: 16px;
+            cursor: pointer;
+            display: inline-block; /* ESSENCIAL para o transform funcionar */
+            transition: all 0.3s ease; /* Suaviza todas as mudanças */
+        }
+        .btn-contato:hover {
+            background-color: #128c7e;
+            transform: scale(1.05);
         }
     </style>
 </head>
