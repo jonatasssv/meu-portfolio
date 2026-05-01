@@ -16,11 +16,13 @@
     transition: transform 0.3s;
     text-align: left;
 }
+/*
 
 .cert-card:hover {
     transform: scale(1.03);
     border-color: #2374ca;
 }
+*/
 
 .cert-img-container {
     width: 100%;
@@ -52,4 +54,28 @@
     margin: 3px 0 0 0;
     font-size: 11px;
     color: #888;
+}
+/* Estilo da imagem no estado normal */
+.cert-img-container img {
+    width: 100%;
+    border-radius: 8px;
+    cursor: zoom-in;
+    transition: transform 0.3s ease;
+    display: block;
+}
+
+/* O QUE FAZ SAIR DO QUADRADO: Copie exatamente assim */
+.cert-img-container img:focus {
+    position: fixed !important; 
+    top: 50% !important;
+    left: 50% !important;
+    transform: translate(-50%, -50%) scale(1) !important;
+    width: auto !important;
+    height: 80vh !important; 
+    max-width: 90vw;
+    z-index: 9999 !important;
+    box-shadow: 0 0 100px rgba(0,0,0,0.8);
+    border-radius: 12px;
+    outline: none;
+    cursor: zoom-out;
 }
