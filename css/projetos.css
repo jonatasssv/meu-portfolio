@@ -78,12 +78,14 @@
     background-color: #007bff;
     color: white;
     border: none;
-    width: 15px;
+    width: 35px;
     height: 60px;       /* Altura maior para ficar fácil de clicar */
     cursor: pointer;
     z-index: 10;        /* Garante que fiquem na frente dos projetos */
     border-radius: 5px;
     font-size: 20px;
+    justify-content: center;
+    align-items: center;
 }
 
 /* 3. Posicionando cada uma no seu lado */

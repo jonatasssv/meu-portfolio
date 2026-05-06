@@ -1,24 +1,41 @@
-// Seleciona os elementos do DOM
 const grid = document.querySelector('.grid-projetos');
 const btnDir = document.querySelector('.dir');
 const btnEsq = document.querySelector('.esq');
 
-// Configura o quanto o carrossel vai andar em cada clique
-const scrollAmount = 300; 
+// Função para calcular quanto rolar
+function getScrollAmount() {
+    const card = document.querySelector('.projeto-item');
+    const style = window.getComputedStyle(grid);
+    const gap = parseInt(style.columnGap) || 20; // Pega o valor do gap do seu CSS
+    
+    // Retorna a largura do card + o espaço entre eles
+    return card.offsetWidth + gap;
+}
 
-// Evento para a seta da DIREITA
 btnDir.addEventListener('click', () => {
     grid.scrollBy({
-        left: scrollAmount,
-        behavior: 'smooth' // Faz o movimento ser suave
-    });
-});
-
-// Evento para a seta da ESQUERDA
-btnEsq.addEventListener('click', () => {
-    grid.scrollBy({
-        left: -scrollAmount,
+        left: getScrollAmount(),
         behavior: 'smooth'
     });
 });
 
+btnEsq.addEventListener('click', () => {
+    grid.scrollBy({
+        left: -getScrollAmount(),
+        behavior: 'smooth'
+    });
+});
+
+const certificados = document.querySelectorAll('.cert-img-container img');
+
+certificados.forEach(img => {
+    img.addEventListener('mousedown', function(e) {
+        // Se a imagem já é o elemento ativo (está ampliada)
+        if (document.activeElement === this) {
+            // Pequeno atraso para garantir que o foco seja removido corretamente
+            setTimeout(() => {
+                this.blur();
+            }, 10);
+        }
+    });
+});
